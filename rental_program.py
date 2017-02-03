@@ -51,4 +51,3 @@ def item_question(user_words):
     """
     answer = input("What item are you " + str(user_words) + "?")
     return answer
-
