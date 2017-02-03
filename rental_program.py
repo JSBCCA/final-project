@@ -50,8 +50,3 @@ def item_question(user_words):
     answer = input("yada yada" + str(user_words) + "yada yada")
     return answer
 
-def return_price(pri):
-    """
-    Returns the price to the user.
-    """
-    return str(pri)

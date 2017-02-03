@@ -31,8 +31,3 @@ def test_item_question():
     """ Asks the user which item they are renting/returning/replacing. """
     assert rental_program.item_question("renting") == "one of the three r's"
     # type of rental_program.item_question() equals string
-
-def test_return_price():
-    """ Returns the price to the user. """
-    assert rental_program.return_price(50) == "50"
-    #  should take in the price and return a string with the price in it
