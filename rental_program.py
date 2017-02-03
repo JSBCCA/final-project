@@ -21,6 +21,8 @@ def show_inventory():
     """
     Returns inventory to the user.
     """
+    with open(..., ...):
+        ...
     # open inventory and save as a variable. Return that variable
     return "what does this return? gotta return something"
 
@@ -47,6 +49,6 @@ def item_question(user_words):
     """
     Asks the user which item they are renting/returning/replacing.
     """
-    answer = input("yada yada" + str(user_words) + "yada yada")
+    answer = input("What item are you " + str(user_words) + "?")
     return answer
 
