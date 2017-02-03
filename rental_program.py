@@ -14,7 +14,7 @@ def transaction_history():
     """
     Takes the item info and status and updates the transaction history.
     """
-    return "what does this return?"
+    return "what does this return? gotta return something"
     # change transaction history
 
 def show_inventory():
@@ -22,7 +22,7 @@ def show_inventory():
     Returns inventory to the user.
     """
     # open inventory and save as a variable. Return that variable
-    return False
+    return "what does this return? gotta return something"
 
 def th_question():
     """
@@ -31,19 +31,24 @@ def th_question():
     If i: show inventory
     If q: quit program
     """
-    return "hi"
+    answer = input()
+    if answer == "q":
+        answer = answer
+    return answer
 
 def r_question():
     """
     Asks the user whether they’re renting, returning, or replacing an item.
     """
-    return "what the user says"
+    answer = input()
+    return answer
 
-def item_question():
+def item_question(user_words):
     """
     Asks the user which item they are renting/returning/replacing.
     """
-    return "name of the item"
+    answer = input("yada yada" + str(user_words) + "yada yada")
+    return answer
 
 def return_price(pri):
     """
