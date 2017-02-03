@@ -42,7 +42,7 @@ def r_question():
     """
     Asks the user whether they’re renting, returning, or replacing an item.
     """
-    answer = input()
+    answer = input("Are you renting, returning, or replacing the item?")
     return answer
 
 def item_question(user_words):
