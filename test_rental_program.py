@@ -6,7 +6,8 @@ def test_edit_inventory():
     assert rental_program.edit_inventory("sdsaj", "dkj") == "Error!"
     assert rental_program.edit_inventory("actual item", "renting") == "Grabbing item..."
     assert rental_program.edit_inventory("actual item", "returning") == "Restocking item..."
-    assert rental_program.edit_inventory('out of stock item', "renting") == "Sorry, that item is out of stock!"
+    assert rental_program.edit_inventory('out of stock item', "renting") == """Sorry, that item
+is out of stock!"""
 
 def test_transaction_history():
     """ Takes the user’s input and adds new info to the transaction history. """
@@ -19,8 +20,7 @@ def test_show_inventory():
 def test_th_question():
     """ Asks the user if they want to view transaction history,
     view inventory, make a transaction, or quit. """
-    assert rental_program.th_question() == "i"
-    assert rental_program.th_question() == "jkaf"
+    assert rental_program.th_question() == "i" or "t" or "h"
     # should return t, i, h, or q
 
 def test_r_question():
