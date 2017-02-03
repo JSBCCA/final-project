@@ -1,20 +1,20 @@
 """ Module Docstring """
 
-def edit_inventory(words, status):
+def edit_inventory(name, status):
     """
     Takes the user’s input and tells the inventory what items to take out/put in.
     """
     if status == "i":
-        words = 4
-        new_info = words + 1
+        name = 4
+        new_info = name + 1
     return new_info
     # words should be the name of an item and status is either renting/returning/replacing
 
-def transaction_history():
+def transaction_history(info, status):
     """
     Takes the item info and status and updates the transaction history.
     """
-    return "what does this return? gotta return something"
+    return info + status
     # change transaction history
 
 def show_inventory():
