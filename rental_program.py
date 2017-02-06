@@ -36,7 +36,10 @@ def show_inventory():
     list_of_lists = []
     for line in stock:
         split_line = line.split(", ")
-        # if item is a number, it shouldn't be a string
+        for i in range(len(split_line)):
+            if len(split_line[i]) <= 4:
+                split_line[i] = int(split_line[i])
+        # if type of the item is an int, it shouldn't be a string
         list_of_lists.append(split_line)
     # separate each line by comma, then put each list into one big list
     return list_of_lists
