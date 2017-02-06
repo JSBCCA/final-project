@@ -40,6 +40,15 @@ def th_question():
     answer = input()
     if answer == "q":
         answer = answer
+        # sys.exit()
+    # elif answer == h:
+        # show transaction history
+    # elif answer == i:
+        # show inventory
+    # elif answer == t:
+        # make transaction
+    # else:
+        # print("oop mah bad yo")
     return answer
 
 def r_question():
