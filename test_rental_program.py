@@ -40,6 +40,7 @@ def test_item_question():
     assert rental_program.item_question("renting") == "one of the three r's"
     # type of rental_program.item_question() equals string
 
+
 # def test_show_inventory():
 #     """
 #     Returns inventory to the user.
