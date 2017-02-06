@@ -39,7 +39,7 @@ def show_inventory():
         for i in range(len(split_line)):
             if len(split_line[i]) <= 4:
                 split_line[i] = int(split_line[i])
-        # if type of the item is an int, it shouldn't be a string
+                # turn numbers into type int
         list_of_lists.append(split_line)
     # separate each line by comma, then put each list into one big list
     return list_of_lists
@@ -70,4 +70,10 @@ def item_question(user_words):
     answer = input("What item are you " + str(user_words) + "?")
     return answer
 
-print(show_inventory())
+print(read_inventory())
+
+# mickey can talk to hearts?
+# pluto's letter?
+# yen sid doesn't question sora's two keyblades?
+# terra's will?
+# namine talks to terra?
