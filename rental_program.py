@@ -23,9 +23,14 @@ def show_inventory():
     item, num in stock, total stock, price for rental, replacement cost
     """
     with open("stock_inventory.csv", "r") as file:
-        stock = file.readlines()
-    # open inventory and save as a variable. Return that variable
-    return stock
+        stock = file.read().splitlines()
+    # open the csv and read each line
+    list_of_lists = []
+    for line in stock:
+        split_line = line.split(",")
+        list_of_lists.append(split_line)
+    # separate each line by comma, then put each list into one big list
+    return list_of_lists
 
 def th_question():
     """
