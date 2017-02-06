@@ -19,7 +19,7 @@ def transaction_history(info, status):
 
 def read_inventory():
     """
-    Reads the inventory.
+    Reads from the inventory.
     """
     with open("stock_inventory.csv", "r") as file:
         stock = file.read()
