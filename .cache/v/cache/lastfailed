@@ -1,0 +1,8 @@
+{
+  "test_rental_program.py::test_edit_inventory": true,
+  "test_rental_program.py::test_item_question": true,
+  "test_rental_program.py::test_r_question": true,
+  "test_rental_program.py::test_show_inventory": true,
+  "test_rental_program.py::test_th_question": true,
+  "test_rental_program.py::test_transaction_history": true
+}
