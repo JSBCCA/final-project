@@ -35,6 +35,7 @@ def test_show_inventory():
         ['replica portal gun', 4, 5, 200, 360],
         ['replica monado', 1, 2, 230, 500]
     ]
+    # how to test?
 
 
 def test_th_question():
