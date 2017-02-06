@@ -19,7 +19,15 @@ def test_show_inventory():
     Returns inventory to the user.
     item, num in stock, total stock, price for rental, replacement cost
     """
-    assert rental_program.show_inventory() == "idk"
+    assert str(rental_program.show_inventory()) == """
+[['1995 Mario Figure Defect (2 noses)', ' 1', ' 1', ' 150', ' 400'],
+['rare Zelda NES', ' 5', ' 6', ' 210', ' 450'],
+['call of duty baseball bat', ' 40', ' 40', ' 22', ' 30'],
+['limited edition punch out boxing gloves', ' 3', ' 3', ' 300', ' 1000'],
+['elder scroll signed by bill nye', ' 0', ' 1', ' 400', ' 650'],
+['replica portal gun', ' 4', ' 5', ' 200', ' 360'],
+['replica monado', ' 1', ' 2', ' 230', ' 500']]
+"""
 
 def test_th_question():
     """ Asks the user if they want to view transaction history,
