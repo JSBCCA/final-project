@@ -72,7 +72,6 @@ def item_question(user_words):
 
 print(read_inventory())
 
-# mickey can talk to hearts?
 # pluto's letter?
 # yen sid doesn't question sora's two keyblades?
 # terra's will?
