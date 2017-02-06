@@ -12,8 +12,7 @@ def test_edit_inventory():
     assert rental_program.edit_inventory("actual item",
                                          "replacing") == "Replacing item..."
     assert rental_program.edit_inventory('out of stock item',
-                                         "renting") == """Sorry, that item
-is out of stock!"""
+                                         "renting") == """Sorry, that item is out of stock!"""
 
 
 def test_transaction_history():
