@@ -17,6 +17,14 @@ def transaction_history(info, status):
     return info + status
     # change transaction history
 
+def read_inventory():
+    """
+    Reads the inventory.
+    """
+    with open("stock_inventory.csv", "r") as file:
+        stock = file.read()
+    return stock
+
 def show_inventory():
     """
     Returns inventory to the user.
@@ -28,6 +36,7 @@ def show_inventory():
     list_of_lists = []
     for line in stock:
         split_line = line.split(", ")
+        # if item is a number, it shouldn't be a string
         list_of_lists.append(split_line)
     # separate each line by comma, then put each list into one big list
     return list_of_lists
