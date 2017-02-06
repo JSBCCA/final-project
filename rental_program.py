@@ -27,22 +27,7 @@ def show_inventory():
     # separate each line by comma, then put each list into one big list
     return list_of_lists
 
-def edit_inventory(name, status):
-    """
-    Takes the user’s input and tells the inventory what items to take out/put in.
-    """
-    if status == "i":
-        name = 4
-        new_info = name + 1
-    return new_info
-    # words should be the name of an item and status is either renting/returning/replacing
 
-def transaction_history(info, status):
-    """
-    Takes the item info and status and updates the transaction history.
-    """
-    return info + status
-    # change transaction history
 
 
 def th_question():
@@ -70,5 +55,22 @@ def item_question(user_words):
     """
     answer = input("What item are you " + str(user_words) + "?")
     return answer
+
+def edit_inventory(name, status):
+    """
+    Takes the user’s input and tells the inventory what items to take out/put in.
+    """
+    if status == "i":
+        name = 4
+        new_info = name + 1
+    return new_info
+    # words should be the name of an item and status is either renting/returning/replacing
+
+def transaction_history(info, status):
+    """
+    Takes the item info and status and updates the transaction history.
+    """
+    return info + status
+    # change transaction history
 
 print(read_inventory())
