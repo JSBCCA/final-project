@@ -23,20 +23,3 @@ def test_transaction_history():
 
 
 
-def test_th_question():
-    """ Asks the user if they want to view transaction history,
-    view inventory, make a transaction, or quit. """
-    assert rental_program.th_question() == "i" or "t" or "h"
-    # should return t, i, h
-
-
-def test_r_question():
-    """ Asks the user whether they’re renting, returning, or replacing an item. """
-    assert rental_program.r_question() == "fakjk"
-
-
-def test_item_question():
-
-    """ Asks the user which item they are renting/returning/replacing. """
-    assert rental_program.item_question("renting") == "one of the three r's"
-    # type of rental_program.item_question() equals string
