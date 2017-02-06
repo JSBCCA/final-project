@@ -71,8 +71,3 @@ def item_question(user_words):
     return answer
 
 print(read_inventory())
-
-# pluto's letter?
-# yen sid doesn't question sora's two keyblades?
-# terra's will?
-# namine talks to terra?
