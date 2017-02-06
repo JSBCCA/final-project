@@ -21,10 +21,10 @@ def show_inventory():
     """
     Returns inventory to the user.
     """
-    with open(..., ...):
-        ...
+    with open("stock_inventory.csv", "r") as file:
+        stock = file.split(",")
     # open inventory and save as a variable. Return that variable
-    return "what does this return? gotta return something"
+    return stock
 
 def th_question():
     """
