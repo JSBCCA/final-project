@@ -27,7 +27,7 @@ def show_inventory():
     # open the csv and read each line
     list_of_lists = []
     for line in stock:
-        split_line = line.split(",")
+        split_line = line.split(", ")
         list_of_lists.append(split_line)
     # separate each line by comma, then put each list into one big list
     return list_of_lists
