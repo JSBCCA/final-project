@@ -15,8 +15,11 @@ def test_transaction_history():
     assert rental_program.transaction_history("item", "renting") == "Added."
 
 def test_show_inventory():
-    """ Returns inventory to the user. """
-    assert rental_program.show_inventory() == "something"
+    """
+    Returns inventory to the user.
+    item, num in stock, total stock, price for rental, replacement cost
+    """
+    assert rental_program.show_inventory() == "idk"
 
 def test_th_question():
     """ Asks the user if they want to view transaction history,

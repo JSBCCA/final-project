@@ -20,9 +20,10 @@ def transaction_history(info, status):
 def show_inventory():
     """
     Returns inventory to the user.
+    item, num in stock, total stock, price for rental, replacement cost
     """
     with open("stock_inventory.csv", "r") as file:
-        stock = file.split(",")
+        stock = file.readlines()
     # open inventory and save as a variable. Return that variable
     return stock
 
@@ -51,3 +52,5 @@ def item_question(user_words):
     """
     answer = input("What item are you " + str(user_words) + "?")
     return answer
+
+print(show_inventory())
