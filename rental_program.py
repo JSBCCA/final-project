@@ -32,7 +32,6 @@ def show_inventory(list_of_lists):
             final_string += si_list[0] + ": Out of Stock\n"
     return final_string
 
-
 def th_question():
     """
     If t: make transaction
