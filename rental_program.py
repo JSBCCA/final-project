@@ -96,24 +96,32 @@ def editfor_renting(something):
     """
     If the user is renting, this should edit the inventory for that
     """
+    with open("stock_inventory.csv", "w") as file:
+        stock = file.write()
     return something
 
 def editfor_returning(something):
     """
     If the user is returning, this should edit the inventory for that
     """
+    with open("stock_inventory.csv", "w") as file:
+        stock = file.write()
     return something
 
 def editfor_replacing(something):
     """
     If the user is replacing, this should edit the inventory for that
     """
+    with open("stock_inventory.csv", "w") as file:
+        stock = file.write()
     return something
 
 def edit_transaction_history(info_and_status):
     """
     Takes the item's info and status and updates the transaction history.
     """
+    with open("transactions.txt", "w") as file:
+        trans = file.write()
     return info_and_status[0]
 
 def show_transaction_history():
