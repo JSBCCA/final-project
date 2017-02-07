@@ -85,4 +85,10 @@ def edit_transaction_history(info, status):
     return info + status
     # change transaction history
 
+def transaction_history():
+    """
+    Shows the user the transaction history.
+    """
+    print("aaa")
+
 print(show_inventory())
