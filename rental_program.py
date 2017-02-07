@@ -51,7 +51,7 @@ def th_question():
         answer = answer
         # make transaction
     else:
-        print("oop mah bad yo")
+        print("Please enter one of the 4 letters.")
     return answer
 
 def r_question():
