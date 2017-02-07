@@ -63,14 +63,14 @@ def r_question():
     """
     Asks the user whether they’re renting, returning, or replacing an item.
     """
-    answer = input("Are you renting, returning, or replacing the item?")
+    answer = input("Are you renting, returning, or replacing the item?\n")
     return answer
 
 def item_question(user_words):
     """
     Asks the user which item they are renting/returning/replacing.
     """
-    answer = input("What item are you " + str(user_words) + "?")
+    answer = input("What item are you " + str(user_words) + "?\n")
     return answer
 
 def edit_inventory(name, status):
