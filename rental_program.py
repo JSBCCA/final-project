@@ -86,10 +86,3 @@ def transaction_history(info, status):
     # change transaction history
 
 print(read_inventory())
-
-# pluto's letter?
-# yen sid doesn't question sora's two keyblades?
-# xehanort's body and soul?
-# gathering and time returning to normal?
-# jack sparrow keyblade?
-# roxas and xion inheritance cerimony?
