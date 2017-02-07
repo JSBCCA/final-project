@@ -38,7 +38,10 @@ def th_question():
     If i: show inventory
     If q: quit program
     """
-    answer = input()
+    answer = input("""Enter 't' to make a transaction.
+    Enter 'h' to show transaction history.
+    Enter 'i' to show the inventory.
+    Enter 'q' to quit.""")
     if answer == "q":
         # quit
         sys.exit()
@@ -53,7 +56,6 @@ def th_question():
         r_question()
     else:
         print("Please enter one of the 4 letters.")
-    return answer
 
 def r_question():
     """
