@@ -15,9 +15,9 @@ def test_edit_inventory():
                                          "renting") == """Sorry, that item is out of stock!"""
 
 
-def test_transaction_history():
+def test_edit_transaction_history():
     """ Takes the user’s input and adds new info to the transaction history. """
-    assert rental_program.transaction_history("item", "renting") == "Added."
+    assert rental_program.edit_transaction_history("item", "renting") == "Added."
 
 
 
