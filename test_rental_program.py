@@ -20,8 +20,3 @@ def test_edit_transaction_history():
     assert rental_program.edit_transaction_history("item", "renting") == "Added."
     assert rental_program.edit_transaction_history("item", "returning") == "Added."
     assert rental_program.edit_transaction_history("jdanj", "klasfj") == "Error adding transaction."
-
-
-
-
-
