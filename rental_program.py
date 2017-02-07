@@ -40,6 +40,7 @@ def th_question():
     """
     answer = input()
     if answer == "q":
+        # quit
         sys.exit()
     elif answer == "h":
         # show transaction history
@@ -89,6 +90,6 @@ def transaction_history():
     """
     Shows the user the transaction history.
     """
-    print("aaa")
+    return "aaa"
 
 print(show_inventory())
