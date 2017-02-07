@@ -27,9 +27,9 @@ def show_inventory(list_of_lists):
     final_string = ""
     for si_list in list_of_lists:
         if si_list[1] > 0:
-            final_string += si_list[0] + ": In Stock"
+            final_string += si_list[0] + ": In Stock\n"
         else:
-            final_string += si_list[0] + ": Out of Stock"
+            final_string += si_list[0] + ": Out of Stock\n"
     return final_string
 
 
