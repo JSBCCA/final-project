@@ -79,19 +79,23 @@ def edit_inventory(name_and_status):
     Takes the user’s input and tells the inventory what items to take out/put in.
     """
     if name_and_status[1] == "returning":
+        # deposit will be returned
         new_info = name_and_status[0]
-    # elif nas == renting
-    # elif nas == replacing
-    # else
+    elif name_and_status[1] == "renting":
+        # user needs to pay and make deposit
+        new_info = name_and_status[0]
+    elif name_and_status[1] == "replacing":
+        # deposit won't be returned
+        new_info = name_and_status[0]
+    else:
+        new_info = name_and_status[0]
     return new_info
-    # words should be the name of an item and status is either renting/returning/replacing
 
 def edit_transaction_history(info, status):
     """
     Takes the item info and status and updates the transaction history.
     """
     return info + status
-    # change transaction history
 
 def show_transaction_history():
     """
