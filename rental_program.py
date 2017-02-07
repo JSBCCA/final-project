@@ -1,17 +1,17 @@
 """ Module Docstring """
 import sys
 
-def read_inventory():
+def show_inventory():
     """
-    Reads from the inventory.
+    Shows the inventory to the user.
     """
     with open("stock_inventory.csv", "r") as file:
         stock = file.read()
     return stock
 
-def show_inventory():
+def list_inventory():
     """
-    Returns inventory to the user.
+    Returns inventory as a list of lists.
     item, num in stock, total stock, price for rental, replacement cost
     """
     with open("stock_inventory.csv", "r") as file:
@@ -42,14 +42,14 @@ def th_question():
     if answer == "q":
         sys.exit()
     elif answer == "h":
-        answer = answer
         # show transaction history
+        transaction_history()
     elif answer == "i":
-        answer = answer
         # show inventory
+        show_inventory()
     elif answer == "t":
-        answer = answer
         # make transaction
+        r_question()
     else:
         print("Please enter one of the 4 letters.")
     return answer
@@ -78,11 +78,11 @@ def edit_inventory(name, status):
     return new_info
     # words should be the name of an item and status is either renting/returning/replacing
 
-def transaction_history(info, status):
+def edit_transaction_history(info, status):
     """
     Takes the item info and status and updates the transaction history.
     """
     return info + status
     # change transaction history
 
-print(read_inventory())
+print(show_inventory())
