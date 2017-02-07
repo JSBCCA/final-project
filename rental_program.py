@@ -89,7 +89,7 @@ def edit_inventory(name_and_status):
         # deposit won't be returned here
         transaction = editfor_replacing(name_and_status[0])
     else:
-        print("error")
+        return "Error!"
     return transaction
 
 def editfor_renting(something):
