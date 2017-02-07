@@ -88,10 +88,12 @@ def edit_transaction_history(info, status):
     return info + status
     # change transaction history
 
-def transaction_history():
+def show_transaction_history():
     """
     Shows the user the transaction history.
     """
-    return "aaa"
+    with open("transactions.txt", "r") as file:
+        trans = file.read()
+    return trans
 
 print(show_inventory())
