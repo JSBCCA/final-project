@@ -1,14 +1,6 @@
 """ Module Docstring """
 import sys
 
-def show_inventory():
-    """
-    Shows the inventory to the user.
-    """
-    with open("stock_inventory.csv", "r") as file:
-        stock = file.read()
-    return stock
-
 def list_inventory():
     """
     Returns inventory as a list of lists.
@@ -28,7 +20,17 @@ def list_inventory():
     # separate each line by comma, then put each list into one big list
     return list_of_lists
 
-
+def show_inventory(list_of_lists):
+    """
+    Shows the inventory to the user.
+    """
+    final_string = ""
+    for si_list in list_of_lists:
+        if si_list[1] > 0:
+            final_string += si_list[0] + ": In Stock"
+        else:
+            final_string += si_list[0] + ": Out of Stock"
+    return final_string
 
 
 def th_question():
@@ -47,10 +49,10 @@ def th_question():
         sys.exit()
     elif answer == "h":
         # show transaction history
-        transaction_history()
+        show_transaction_history()
     elif answer == "i":
         # show inventory
-        show_inventory()
+        show_inventory(list_inventory())
     elif answer == "t":
         # make transaction
         r_question()
@@ -96,4 +98,4 @@ def show_transaction_history():
         trans = file.read()
     return trans
 
-print(show_inventory())
+th_question()
