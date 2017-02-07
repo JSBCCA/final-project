@@ -40,16 +40,17 @@ def th_question():
     If i: show inventory
     If q: quit program
     """
-    answer = input("""Enter 't' to make a transaction.
-    Enter 'h' to show transaction history.
-    Enter 'i' to show the inventory.
-    Enter 'q' to quit.""")
+    print("Enter 't' to make a transaction.")
+    print("Enter 'h' to show transaction history.")
+    print("Enter 'i' to show the inventory.")
+    print("Enter 'q' to quit.")
+    answer = input()
     if answer == "q":
         # quit
         sys.exit()
     elif answer == "h":
         # show transaction history
-        show_transaction_history()
+        print(show_transaction_history())
     elif answer == "i":
         # show inventory
         show_inventory(list_inventory())
