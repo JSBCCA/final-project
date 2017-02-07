@@ -65,6 +65,7 @@ def r_question():
     Asks the user whether they’re renting, returning, or replacing an item.
     """
     answer = input("Are you renting, returning, or replacing the item?\n")
+    # if answer doesn't == one of the r's, loop
     return answer
 
 def item_question(user_words):
@@ -78,24 +79,42 @@ def edit_inventory(name_and_status):
     """
     Takes the user’s input and tells the inventory what items to take out/put in.
     """
-    if name_and_status[1] == "returning":
-        # deposit will be returned
-        new_info = name_and_status[0]
-    elif name_and_status[1] == "renting":
-        # user needs to pay and make deposit
-        new_info = name_and_status[0]
+    if name_and_status[1] == "renting":
+        # user needs to pay and make deposit here
+        transaction = editfor_renting(name_and_status[0])
+    elif name_and_status[1] == "returning":
+        # deposit will be returned here
+        transaction = editfor_returning(name_and_status[0])
     elif name_and_status[1] == "replacing":
-        # deposit won't be returned
-        new_info = name_and_status[0]
+        # deposit won't be returned here
+        transaction = editfor_replacing(name_and_status[0])
     else:
-        new_info = name_and_status[0]
-    return new_info
+        print("error")
+    return transaction
 
-def edit_transaction_history(info, status):
+def editfor_renting(something):
     """
-    Takes the item info and status and updates the transaction history.
+    If the user is renting, this should edit the inventory for that
     """
-    return info + status
+    return something
+
+def editfor_returning(something):
+    """
+    If the user is returning, this should edit the inventory for that
+    """
+    return something
+
+def editfor_replacing(something):
+    """
+    If the user is replacing, this should edit the inventory for that
+    """
+    return something
+
+def edit_transaction_history(info_and_status):
+    """
+    Takes the item's info and status and updates the transaction history.
+    """
+    return info_and_status[0]
 
 def show_transaction_history():
     """
