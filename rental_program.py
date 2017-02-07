@@ -41,14 +41,17 @@ def th_question():
     if answer == "q":
         answer = answer
         # sys.exit()
-    # elif answer == h:
+    elif answer == "h":
+        answer = answer
         # show transaction history
-    # elif answer == i:
+    elif answer == "i":
+        answer = answer
         # show inventory
-    # elif answer == t:
+    elif answer == "t":
+        answer = answer
         # make transaction
-    # else:
-        # print("oop mah bad yo")
+    else:
+        print("oop mah bad yo")
     return answer
 
 def r_question():
@@ -69,7 +72,7 @@ def edit_inventory(name, status):
     """
     Takes the user’s input and tells the inventory what items to take out/put in.
     """
-    if status == "i":
+    if status == "returning":
         name = 4
         new_info = name + 1
     return new_info
