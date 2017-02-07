@@ -55,9 +55,9 @@ def th_question():
         print("\n" + show_inventory(list_inventory()))
     elif answer == "t":
         # make transaction
-        r_question()
+        edit_inventory(item_question(r_question()))
     else:
-        print("Please enter one of the 4 letters.")
+        print("\nPlease enter one of the 4 letters.")
 
 def r_question():
     """
@@ -71,15 +71,15 @@ def item_question(user_words):
     Asks the user which item they are renting/returning/replacing.
     """
     answer = input("What item are you " + str(user_words) + "?\n")
-    return answer
+    return [answer, user_words]
 
-def edit_inventory(name, status):
+def edit_inventory(name_and_status):
     """
     Takes the user’s input and tells the inventory what items to take out/put in.
     """
-    if status == "returning":
-        name = 4
-        new_info = name + 1
+    if name_and_status[1] == "returning":
+        name_and_status[0] = 4
+        new_info = name_and_status[0] + 1
     return new_info
     # words should be the name of an item and status is either renting/returning/replacing
 
