@@ -50,10 +50,10 @@ def th_question():
         sys.exit()
     elif answer == "h":
         # show transaction history
-        print(show_transaction_history())
+        print("\n" + show_transaction_history())
     elif answer == "i":
         # show inventory
-        show_inventory(list_inventory())
+        print("\n" + show_inventory(list_inventory()))
     elif answer == "t":
         # make transaction
         r_question()
