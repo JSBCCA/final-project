@@ -58,6 +58,7 @@ def th_question():
         edit_inventory(item_question(r_question()))
     else:
         print("\nPlease enter one of the 4 letters.")
+        # loop back over when this happens
 
 def r_question():
     """
