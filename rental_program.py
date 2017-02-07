@@ -78,8 +78,10 @@ def edit_inventory(name_and_status):
     Takes the user’s input and tells the inventory what items to take out/put in.
     """
     if name_and_status[1] == "returning":
-        name_and_status[0] = 4
-        new_info = name_and_status[0] + 1
+        new_info = name_and_status[0]
+    # elif nas == renting
+    # elif nas == replacing
+    # else
     return new_info
     # words should be the name of an item and status is either renting/returning/replacing
 
