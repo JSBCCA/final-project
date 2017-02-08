@@ -44,7 +44,7 @@ def th_question():
     print("Enter 't' to make a transaction.")
     print("Enter 'h' to show transaction history.")
     print("Enter 'i' to show the inventory.")
-    print("Enter 'q' to quit.")
+    print("Enter 'q' at any time to quit.")
     answer = input()
     if answer == "q":
         # quit
@@ -69,6 +69,8 @@ def r_question():
     """
     answer = input("Are you renting, returning, or replacing the item?\n")
     # if answer doesn't == one of the r's, loop
+    if answer == "q":
+        sys.exit()
     return answer
 
 def item_question(user_words):
@@ -76,6 +78,8 @@ def item_question(user_words):
     Asks the user which item they are renting/returning/replacing.
     """
     answer = input("What item are you " + str(user_words) + "?\n")
+    if answer == "q":
+        sys.exit()
     return [answer, user_words]
 
 # edit_inventory
@@ -102,6 +106,7 @@ def editfor_renting(item_name):
     """
     # read from file, make changes item_name, write the changed info to the file
     list_of_inv = list_inventory()
+    
     with open("stock_inventory.csv", "w") as file:
         file.write()  # edit the inventory
     return item_name
@@ -110,16 +115,16 @@ def editfor_returning(item_name):
     """
     If the user is returning, this should edit the inventory to account for that
     """
-    with open("stock_inventory.csv", "w") as file:
-        file.write()  # edit the inventory
+    # with open("stock_inventory.csv", "w") as file:
+    #     file.write()  # edit the inventory
     return item_name
 
 def editfor_replacing(item_name):
     """
     If the user is replacing, this should edit the inventory to account for that
     """
-    with open("stock_inventory.csv", "w") as file:
-        file.write()  # edit the inventory
+    # with open("stock_inventory.csv", "w") as file:
+    #     file.write()  # edit the inventory
     return item_name
 
 # edit_transaction_history
@@ -127,9 +132,9 @@ def edit_transaction_history(info_and_status):
     """
     Takes the item's info and status and updates the transaction history.
     """
-    with open("transactions.txt", "w") as file:
-        trans = file.write()  # edit transactions
-    return info_and_status[0] + trans
+    # with open("transactions.txt", "w") as file:
+    #     trans = file.write()  # edit transactions
+    return info_and_status[0]  # + trans
 
 def show_transaction_history():
     """
