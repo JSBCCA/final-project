@@ -90,13 +90,10 @@ def edit_inventory(name_and_status):
     Takes the user’s input and tells the inventory what items to take out/put in.
     """
     if name_and_status[1] == "renting":
-        # user needs to pay and make deposit here
         transaction = editfor_renting(name_and_status[0])
     elif name_and_status[1] == "returning":
-        # deposit will be returned here
         transaction = editfor_returning(name_and_status[0])
     elif name_and_status[1] == "replacing":
-        # deposit won't be returned here
         transaction = editfor_replacing(name_and_status[0])
     else:
         return "Error!"
@@ -133,6 +130,7 @@ def edit_transaction_history(info_and_status):
     """
     Takes the item's info and status (one of the 3 r's) and updates the transaction history.
     """
+    # user pays if renting, gets deposit if returning, gets nothing if replacing
     # with open("transactions.txt", "w") as file:
     #     file.write()  # edit transactions
     return info_and_status[0]  # + trans
