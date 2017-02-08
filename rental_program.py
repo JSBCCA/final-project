@@ -33,7 +33,7 @@ def show_inventory(list_of_lists):
     return final_string
 
 
-#th_question
+
 def th_question():
     """
     If t: make transaction
@@ -45,7 +45,7 @@ def th_question():
     print("Enter 'h' to show transaction history.")
     print("Enter 'i' to show the inventory.")
     print("Enter 'q' at any time to quit.")
-    answer = input()
+    answer = input().lower()
     if answer == "q":
         # quit
         sys.exit()
@@ -59,18 +59,20 @@ def th_question():
         # make transaction
         edit_inventory(item_question(r_question()))
     else:
-        print("\nPlease enter one of the 4 letters.")
-        # loop back over when this happens
+        print("\nPlease enter one of the 4 letters.\n")
+        th_question()
 
-# r_question
+
 def r_question():
     """
     Asks the user whether they’re renting, returning, or replacing an item.
     """
-    answer = input("Are you renting, returning, or replacing the item?\n")
+    answer = input("Are you renting, returning, or replacing the item?\n").lower()
     # if answer doesn't == one of the r's, loop
     if answer == "q":
         sys.exit()
+    elif answer != "renting" or "returning" or "replacing":
+        answer = r_question()
     return answer
 
 def item_question(user_words):
@@ -106,10 +108,9 @@ def editfor_renting(item_name):
     """
     # read from file, make changes item_name, write the changed info to the file
     list_of_inv = list_inventory()
-    
     # with open("stock_inventory.csv", "w") as file:
     #     file.write()  # edit the inventory
-    return item_name
+    return item_name + list_of_inv
 
 def editfor_returning(item_name):
     """
@@ -130,7 +131,7 @@ def editfor_replacing(item_name):
 # edit_transaction_history
 def edit_transaction_history(info_and_status):
     """
-    Takes the item's info and status and updates the transaction history.
+    Takes the item's info and status (one of the 3 r's) and updates the transaction history.
     """
     # with open("transactions.txt", "w") as file:
     #     trans = file.write()  # edit transactions
