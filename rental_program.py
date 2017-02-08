@@ -32,6 +32,8 @@ def show_inventory(list_of_lists):
             final_string += si_list[0] + ": Out of Stock\n"
     return final_string
 
+
+#th_question
 def th_question():
     """
     If t: make transaction
@@ -60,6 +62,7 @@ def th_question():
         print("\nPlease enter one of the 4 letters.")
         # loop back over when this happens
 
+# r_question
 def r_question():
     """
     Asks the user whether they’re renting, returning, or replacing an item.
@@ -75,6 +78,7 @@ def item_question(user_words):
     answer = input("What item are you " + str(user_words) + "?\n")
     return [answer, user_words]
 
+# edit_inventory
 def edit_inventory(name_and_status):
     """
     Takes the user’s input and tells the inventory what items to take out/put in.
@@ -97,32 +101,32 @@ def editfor_renting(something):
     If the user is renting, this should edit the inventory for that
     """
     with open("stock_inventory.csv", "w") as file:
-        stock = file.write()
-    return something
+        stock = file.write()  # edit the inventory
+    return something + stock
 
 def editfor_returning(something):
     """
     If the user is returning, this should edit the inventory for that
     """
     with open("stock_inventory.csv", "w") as file:
-        stock = file.write()
-    return something
+        stock = file.write()  # edit the inventory
+    return something + stock
 
 def editfor_replacing(something):
     """
     If the user is replacing, this should edit the inventory for that
     """
     with open("stock_inventory.csv", "w") as file:
-        stock = file.write()
-    return something
+        stock = file.write()  # edit the inventory
+    return something + stock
 
 def edit_transaction_history(info_and_status):
     """
     Takes the item's info and status and updates the transaction history.
     """
     with open("transactions.txt", "w") as file:
-        trans = file.write()
-    return info_and_status[0]
+        trans = file.write()  # edit transactions
+    return info_and_status[0] + trans
 
 def show_transaction_history():
     """
