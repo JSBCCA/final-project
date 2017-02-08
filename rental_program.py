@@ -79,12 +79,12 @@ def item_question(user_words):
     """
     Asks the user which item they are renting/returning/replacing.
     """
-    answer = input("What item are you " + str(user_words) + "?\n")
+    answer = input("What item are you " + str(user_words) + "?\n").lower()
     if answer == "q":
         sys.exit()
     return [answer, user_words]
 
-# edit_inventory
+
 def edit_inventory(name_and_status):
     """
     Takes the user’s input and tells the inventory what items to take out/put in.
