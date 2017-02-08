@@ -107,8 +107,8 @@ def editfor_renting(item_name):
     # read from file, make changes item_name, write the changed info to the file
     list_of_inv = list_inventory()
     
-    with open("stock_inventory.csv", "w") as file:
-        file.write()  # edit the inventory
+    # with open("stock_inventory.csv", "w") as file:
+    #     file.write()  # edit the inventory
     return item_name
 
 def editfor_returning(item_name):
