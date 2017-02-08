@@ -96,30 +96,33 @@ def edit_inventory(name_and_status):
         return "Error!"
     return transaction
 
-def editfor_renting(something):
+def editfor_renting(item_name):
     """
     If the user is renting, this should edit the inventory for that
     """
+    # read from file, make changes using something, write the changed info to the file
+    # use list_inventory()
     with open("stock_inventory.csv", "w") as file:
         stock = file.write()  # edit the inventory
-    return something + stock
+    return item_name + stock
 
-def editfor_returning(something):
+def editfor_returning(item_name):
     """
     If the user is returning, this should edit the inventory for that
     """
     with open("stock_inventory.csv", "w") as file:
         stock = file.write()  # edit the inventory
-    return something + stock
+    return item_name + stock
 
-def editfor_replacing(something):
+def editfor_replacing(item_name):
     """
     If the user is replacing, this should edit the inventory for that
     """
     with open("stock_inventory.csv", "w") as file:
         stock = file.write()  # edit the inventory
-    return something + stock
+    return item_name + stock
 
+# edit_transaction_history
 def edit_transaction_history(info_and_status):
     """
     Takes the item's info and status and updates the transaction history.
