@@ -98,9 +98,9 @@ def edit_inventory(name_and_status):
 
 def editfor_renting(item_name):
     """
-    If the user is renting, this should edit the inventory to account that
+    If the user is renting, this should edit the inventory to account for that
     """
-    # read from file, make changes using something, write the changed info to the file
+    # read from file, make changes item_name, write the changed info to the file
     list_of_inv = list_inventory()
     with open("stock_inventory.csv", "w") as file:
         file.write()  # edit the inventory
@@ -108,7 +108,7 @@ def editfor_renting(item_name):
 
 def editfor_returning(item_name):
     """
-    If the user is returning, this should edit the inventory to account that
+    If the user is returning, this should edit the inventory to account for that
     """
     with open("stock_inventory.csv", "w") as file:
         file.write()  # edit the inventory
@@ -116,7 +116,7 @@ def editfor_returning(item_name):
 
 def editfor_replacing(item_name):
     """
-    If the user is replacing, this should edit the inventory to account that
+    If the user is replacing, this should edit the inventory to account for that
     """
     with open("stock_inventory.csv", "w") as file:
         file.write()  # edit the inventory
