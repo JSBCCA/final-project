@@ -110,7 +110,7 @@ def editfor_renting(item_name):
     list_of_inv = list_inventory()
     # with open("stock_inventory.csv", "w") as file:
     #     file.write()  # edit the inventory
-    return item_name + list_of_inv
+    return "Grabbing item..." or "Sorry, that item is out of stock!"
 
 def editfor_returning(item_name):
     """
@@ -118,7 +118,7 @@ def editfor_returning(item_name):
     """
     # with open("stock_inventory.csv", "w") as file:
     #     file.write()  # edit the inventory
-    return item_name
+    return "Restocking item..."
 
 def editfor_replacing(item_name):
     """
@@ -126,7 +126,7 @@ def editfor_replacing(item_name):
     """
     # with open("stock_inventory.csv", "w") as file:
     #     file.write()  # edit the inventory
-    return item_name
+    return "Replacing item..."
 
 # edit_transaction_history
 def edit_transaction_history(info_and_status):
@@ -134,7 +134,7 @@ def edit_transaction_history(info_and_status):
     Takes the item's info and status (one of the 3 r's) and updates the transaction history.
     """
     # with open("transactions.txt", "w") as file:
-    #     trans = file.write()  # edit transactions
+    #     file.write()  # edit transactions
     return info_and_status[0]  # + trans
 
 def show_transaction_history():
