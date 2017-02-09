@@ -89,7 +89,7 @@ def r_question():
     if answer == "q":
         sys.exit()
     elif (answer != "renting") and (answer != "returning") and (answer != "replacing"):
-        r_question()
+        return r_question()
     else:
         return answer
 
