@@ -75,8 +75,6 @@ def th_question():
         edit_inventory(item_info)
         edit_transaction_history(item_info)
         print("Thank you for your business!")
-        if item_info[1] == "returning":
-            print("Your deposit has been returned to you.")
     else:
         print("\nPlease enter one of the 4 letters.\n")
         th_question()
@@ -171,6 +169,7 @@ def editfor_returning(item_name):
         # write to file
         with open("stock_inventory.csv", "w") as file:
             file.write(text_inv)
+        print("Your deposit has been returned to you.")
         return "Grabbing item..."
     else:
         print("\nSorry, we don't have that item!")
