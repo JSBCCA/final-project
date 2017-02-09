@@ -74,7 +74,9 @@ def th_question():
         item_info = item_question(r_question())
         edit_inventory(item_info)
         edit_transaction_history(item_info)
-        # here, thank user and give info somehow
+        print("Thank you for your business!")
+        if item_info[1] == "returning":
+            print("Your deposit has been returned to you.")
     else:
         print("\nPlease enter one of the 4 letters.\n")
         th_question()
@@ -140,6 +142,7 @@ def editfor_renting(item_name):
         # write to file
         with open("stock_inventory.csv", "w") as file:
             file.write(text_inv)
+        print("We'll be taking a 10% deposit.")
         return "Grabbing item..."
     else:
         print("Sorry, we don't have that item!")
@@ -175,7 +178,6 @@ def edit_transaction_history(info_and_status):
     Takes the item's info and status (one of the 3 r's) and updates the transaction history.
     [item name, item status]
     """
-    # user pays if renting, gets deposit if returning, gets nothing if replacing
     # with open("transactions.txt", "w") as file:
     #     file.write(variable)
     return info_and_status[0]  # return that the transaction succeeded, maybe
