@@ -57,7 +57,7 @@ def th_question():
         print("\n" + show_inventory(list_inventory()))
     elif answer == "t":
         # make transaction
-        edit_inventory(item_question(r_question()))
+        print(edit_transaction_history(edit_inventory(item_question(r_question()))))
     else:
         print("\nPlease enter one of the 4 letters.\n")
         th_question()
@@ -134,7 +134,7 @@ def edit_transaction_history(info_and_status):
     # user pays if renting, gets deposit if returning, gets nothing if replacing
     # with open("transactions.txt", "w") as file:
     #     file.write(variable)
-    return info_and_status[0]  # + trans
+    return info_and_status[0]  # return that the transaction succeeded, maybe
 
 def show_transaction_history():
     """
