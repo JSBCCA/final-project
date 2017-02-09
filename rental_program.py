@@ -20,6 +20,20 @@ def list_inventory():
     # separate each line by comma, then put each list into one big list
     return list_of_lists
 
+def list_to_text(list_of_list):
+    """
+    Converts list of lists into a string.
+    """
+    final_string = ""
+    for line in list_of_list:
+        for item in line:
+            if line != list_of_list[-1]:
+                final_string += item + ", "
+            else:
+                final_string += item
+        if line != list_of_list[-1]:
+            final_string += "\n"
+    return final_string
 def show_inventory(list_of_lists):
     """
     Shows the inventory to the user.
@@ -57,7 +71,10 @@ def th_question():
         print("\n" + show_inventory(list_inventory()))
     elif answer == "t":
         # make transaction
-        print(edit_transaction_history(edit_inventory(item_question(r_question()))))
+        item_info = item_question(r_question())
+        edit_inventory(item_info)
+        edit_transaction_history(item_info)
+        # here, thank user and give info somehow
     else:
         print("\nPlease enter one of the 4 letters.\n")
         th_question()
@@ -102,17 +119,25 @@ def edit_inventory(name_and_status):
 
 def editfor_renting(item_name):
     """
-    If the user is renting, this should edit the inventory to account for that
+    If the user is renting, this should edit the inventory to account for that.
     """
-    # read from file, make changes using item_name, write the changed info to the file
+    # make changes to the list_of_inv
     list_of_inv = list_inventory()
-    # with open("stock_inventory.csv", "w") as file:
-    #     file.write(variable)
-    return "Grabbing item..." or "Sorry, that item is out of stock!"
+    changed_inv = []
+    for line in list_of_inv:
+        if line[0] == item_name:
+            line[1] = line[1] - 1
+        changed_inv.append(line)
+    # change lists back to text
+    list_to_text(changed_inv)
+    # write to file
+    with open("stock_inventory.csv", "w") as file:
+        file.write(changed_inv)
+    return "Grabbing item..."
 
 def editfor_returning(item_name):
     """
-    If the user is returning, this should edit the inventory to account for that
+    If the user is returning, this should edit the inventory to account for that.
     """
     # with open("stock_inventory.csv", "w") as file:
     #     file.write(variable)
@@ -120,7 +145,7 @@ def editfor_returning(item_name):
 
 def editfor_replacing(item_name):
     """
-    If the user is replacing, this should edit the inventory to account for that
+    If the user is replacing, this should edit the inventory to account for that.
     """
     # with open("stock_inventory.csv", "w") as file:
     #     file.write(variable)
