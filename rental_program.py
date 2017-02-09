@@ -217,11 +217,11 @@ def create_transaction(info_and_status):
     Takes in item info and status [name, r] and converts it into a transaction string.
     """
     if info_and_status[1] == "renting":
-        "placeholder"
+        trans_string = "placeholder"
     elif info_and_status[1] == "returning":
-        "placeholder"
+        trans_string = "placeholder"
     elif info_and_status[1] == "replacing":
-        "placeholder"
+        trans_string = "placeholder"
     else:
         return "Error!"
     # ['Replaced: Call of Duty Baseball Bat; Paid: 3\n',
