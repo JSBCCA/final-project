@@ -27,7 +27,7 @@ def list_to_text(list_of_list):
     final_string = ""
     for line in list_of_list:
         for item in line:
-            if line != list_of_list[-1]:
+            if item != line[-1]:
                 final_string += str(item) + ", "
             else:
                 final_string += str(item)
