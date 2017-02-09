@@ -121,19 +121,28 @@ def editfor_renting(item_name):
     """
     If the user is renting, this should edit the inventory to account for that.
     """
-    # make changes to the list_of_inv
     list_of_inv = list_inventory()
+    namelist = []
+    # make changes to the list_of_inv
     changed_inv = []
     for line in list_of_inv:
         if line[0] == item_name:
-            line[1] = line[1] - 1
+            if line[1] > 0:
+                line[1] = line[1] - 1
+            else:
+                print("Sorry, that item is out of stock!")
+                sys.exit()
+        namelist.append(line[0])
         changed_inv.append(line)
-    # change lists back to text
-    list_to_text(changed_inv)
-    # write to file
-    with open("stock_inventory.csv", "w") as file:
-        file.write(changed_inv)
-    return "Grabbing item..."
+    if item_name in namelist:
+        # change lists back to text
+        list_to_text(changed_inv)
+        # write to file
+        with open("stock_inventory.csv", "w") as file:
+            file.write(changed_inv)
+        return "Grabbing item..."
+    else:
+        print("Sorry, we don't have that item!")
 
 def editfor_returning(item_name):
     """
