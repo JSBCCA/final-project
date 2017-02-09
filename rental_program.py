@@ -229,13 +229,14 @@ def edit_transaction_history(created_transaction):
     """
     with open("transactions.txt", "r") as file:
         transaction_list = file.readlines()
-    
+
+    transaction_list[-1] += "\n"
     transaction_list.append(created_transaction)
     transactions = "".join(transaction_list)
 
     with open("transactions.txt", "w") as file:
         file.write(transactions)
-    
+
     return "Transaction recorded."
 
 th_question()
