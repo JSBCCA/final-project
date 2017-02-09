@@ -84,7 +84,7 @@ def r_question():
     """
     Asks the user whether they’re renting, returning, or replacing an item.
     """
-    answer = input("Are you renting, returning, or replacing the item?\n").lower()
+    answer = input("\nAre you renting, returning, or replacing the item?\n").lower()
     # if answer doesn't == one of the r's, loop
     if answer == "q":
         sys.exit()
@@ -97,7 +97,7 @@ def item_question(user_words):
     """
     Asks the user which item they are renting/returning/replacing.
     """
-    answer = input("What item are you " + str(user_words) + "?\n").lower()
+    answer = input("\nWhat item are you " + str(user_words) + "?\n").lower()
     if answer == "q":
         sys.exit()
     return [answer, user_words]
