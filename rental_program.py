@@ -127,7 +127,7 @@ def editfor_renting(item_name):
     changed_inv = []
     for line in list_of_inv:
         namelist.append(line[0].lower())
-        if line[0] == item_name:
+        if line[0].lower() == item_name:
             if line[1] > 0:
                 line[1] = line[1] - 1
             else:
@@ -143,6 +143,7 @@ def editfor_renting(item_name):
         return "Grabbing item..."
     else:
         print("Sorry, we don't have that item!")
+        sys.exit()
 
 def editfor_returning(item_name):
     """
