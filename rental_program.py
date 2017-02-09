@@ -73,7 +73,7 @@ def th_question():
         # make transaction
         item_info = item_question(r_question())
         edit_inventory(item_info)
-        edit_transaction_history(item_info)
+        edit_transaction_history(create_transaction())
         print("Thank you for your business!")
     else:
         print("\nPlease enter one of the 4 letters.\n")
@@ -198,7 +198,7 @@ def editfor_replacing(item_name):
         # write to file
         with open("stock_inventory.csv", "w") as file:
             file.write(text_inv)
-        print("Your deposit will not be returned to you.")
+        print("We will keep your earlier deposit as compensation.")
         return "Replacing item..."
     else:
         print("\nSorry, we don't have that kind of item!")
@@ -212,14 +212,30 @@ def show_transaction_history():
         trans = file.read()
     return trans
 
+def create_transaction(info_and_status):
+    """
+    Takes in item info and status [name, r] and converts it into a transaction string.
+    """
+    # turn info and status into trans string
+    # ['Replaced: Call of Duty Baseball Bat; Paid: 3\n',
+    #  'Rented: Replica Kingdom Key; Paid: 246.1; Deposit: 50\n',
+    #  'Returned: Replica Portal Gun']
+    trans_string = info_and_status
+    return trans_string
 
-def edit_transaction_history(info_and_status):
+def edit_transaction_history(created_transaction):
     """
-    Takes the item's info and status (one of the 3 r's) and updates the transaction history.
-    [item name, item status]
+    Takes in string of transaction and updates the transaction history.
     """
-    # with open("transactions.txt", "w") as file:
-    #     file.write(variable)
-    return info_and_status[0]  # return that the transaction succeeded, maybe
+    with open("transactions.txt", "r") as file:
+        transaction_list = file.readlines()
+    
+    transaction_list.append(created_transaction)
+    transactions = "".join(transaction_list)
+
+    with open("transactions.txt", "w") as file:
+        file.write(transactions)
+    
+    return "Transaction recorded."
 
 th_question()
