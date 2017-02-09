@@ -4,3 +4,4 @@ Rented: Call of Duty Baseball Bat; Paid: 23.54; Deposit: 3
 Replaced: Call of Duty Baseball Bat; Paid: 3
 Rented: 1995 Mario Figure Defect (2 noses); Paid: 160.5; Deposit: 40
 Rented: Replica Kingdom Key; Paid: 246.1; Deposit: 50
+Returned: Replica Portal Gun
