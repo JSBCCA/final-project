@@ -28,9 +28,9 @@ def list_to_text(list_of_list):
     for line in list_of_list:
         for item in line:
             if line != list_of_list[-1]:
-                final_string += item + ", "
+                final_string += str(item) + ", "
             else:
-                final_string += item
+                final_string += str(item)
         if line != list_of_list[-1]:
             final_string += "\n"
     return final_string
@@ -136,10 +136,10 @@ def editfor_renting(item_name):
         changed_inv.append(line)
     if item_name in namelist:
         # change lists back to text
-        list_to_text(changed_inv)
+        text_inv = list_to_text(changed_inv)
         # write to file
         with open("stock_inventory.csv", "w") as file:
-            file.write(changed_inv)
+            file.write(text_inv)
         return "Grabbing item..."
     else:
         print("Sorry, we don't have that item!")
