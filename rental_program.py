@@ -71,9 +71,10 @@ def r_question():
     # if answer doesn't == one of the r's, loop
     if answer == "q":
         sys.exit()
-    elif answer != "renting" or "returning" or "replacing":
-        answer = r_question()
-    return answer
+    elif (answer != "renting") and (answer != "returning") and (answer != "replacing"):
+        r_question()
+    else:
+        return answer
 
 def item_question(user_words):
     """
