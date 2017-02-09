@@ -126,13 +126,13 @@ def editfor_renting(item_name):
     # make changes to the list_of_inv
     changed_inv = []
     for line in list_of_inv:
+        namelist.append(line[0].lower())
         if line[0] == item_name:
             if line[1] > 0:
                 line[1] = line[1] - 1
             else:
                 print("Sorry, that item is out of stock!")
                 sys.exit()
-        namelist.append(line[0])
         changed_inv.append(line)
     if item_name in namelist:
         # change lists back to text
