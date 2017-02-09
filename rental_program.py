@@ -161,7 +161,15 @@ def editfor_replacing(item_name):
     #     file.write(variable)
     return "Replacing item..."
 
-# edit_transaction_history
+def show_transaction_history():
+    """
+    Shows the user the transaction history.
+    """
+    with open("transactions.txt", "r") as file:
+        trans = file.read()
+    return trans
+
+
 def edit_transaction_history(info_and_status):
     """
     Takes the item's info and status (one of the 3 r's) and updates the transaction history.
@@ -170,13 +178,5 @@ def edit_transaction_history(info_and_status):
     # with open("transactions.txt", "w") as file:
     #     file.write(variable)
     return info_and_status[0]  # return that the transaction succeeded, maybe
-
-def show_transaction_history():
-    """
-    Shows the user the transaction history.
-    """
-    with open("transactions.txt", "r") as file:
-        trans = file.read()
-    return trans
 
 th_question()
