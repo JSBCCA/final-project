@@ -132,7 +132,7 @@ def editfor_renting(item_name):
                 line[1] = line[1] - 1
             else:
                 print("Sorry, that item is out of stock!")
-                sys.exit()
+                return "Sorry, that item is out of stock!"
         changed_inv.append(line)
     if item_name in namelist:
         # change lists back to text
@@ -173,6 +173,7 @@ def show_transaction_history():
 def edit_transaction_history(info_and_status):
     """
     Takes the item's info and status (one of the 3 r's) and updates the transaction history.
+    [item name, item status]
     """
     # user pays if renting, gets deposit if returning, gets nothing if replacing
     # with open("transactions.txt", "w") as file:
