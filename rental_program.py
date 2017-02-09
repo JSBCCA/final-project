@@ -133,7 +133,7 @@ def editfor_renting(item_name):
             if line[1] > 0:
                 line[1] = line[1] - 1
             else:
-                print("Sorry, that item is out of stock!")
+                print("\nSorry, that item is out of stock!")
                 return "Sorry, that item is out of stock!"
         changed_inv.append(line)
     if item_name in namelist:
@@ -142,19 +142,39 @@ def editfor_renting(item_name):
         # write to file
         with open("stock_inventory.csv", "w") as file:
             file.write(text_inv)
-        print("We'll be taking a 10% deposit.")
+        print("\nWe'll be taking a 10% deposit.")
         return "Grabbing item..."
     else:
-        print("Sorry, we don't have that item!")
+        print("\nSorry, we don't have that item!")
         sys.exit()
 
 def editfor_returning(item_name):
     """
     If the user is returning, this should edit the inventory to account for that.
     """
-    # with open("stock_inventory.csv", "w") as file:
-    #     file.write(variable)
-    return "Restocking item..."
+    list_of_inv = list_inventory()
+    namelist = []
+    # make changes to the list_of_inv
+    changed_inv = []
+    for line in list_of_inv:
+        namelist.append(line[0].lower())
+        if line[0].lower() == item_name:
+            if line[1] < line[2]:
+                line[1] = line[1] + 1
+            else:
+                print("\nSorry, our stock of that item is full!")
+                return "Sorry, our stock of that item is full!"
+        changed_inv.append(line)
+    if item_name in namelist:
+        # change lists back to text
+        text_inv = list_to_text(changed_inv)
+        # write to file
+        with open("stock_inventory.csv", "w") as file:
+            file.write(text_inv)
+        return "Grabbing item..."
+    else:
+        print("\nSorry, we don't have that item!")
+        sys.exit()
 
 def editfor_replacing(item_name):
     """
