@@ -1,7 +1,7 @@
 """ Module Docstring """
 import rental_program
 
-
+# can't test input
 def test_edit_inventory():
     """ Takes the user’s input and tells the inventory what items to take out/put in. """
     assert rental_program.edit_inventory(["sdsaj", "dkj"]) == "Error!"
