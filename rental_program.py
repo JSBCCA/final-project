@@ -95,7 +95,7 @@ def r_question():
     """
     Asks the user whether they’re renting, returning, or replacing an item.
     """
-    answer = input("\nAre you renting, returning, or replacing the item?\n").lower()
+    answer = input("\nAre you renting, returning, or replacing the item? ('q' to quit)\n").lower()
     # if answer doesn't == one of the r's, loop
     if answer == "q":
         sys.exit()
@@ -108,7 +108,8 @@ def item_question(user_words):
     """
     Asks the user which item they are renting/returning/replacing.
     """
-    answer = input("\nWhat item are you " + str(user_words) + "?\n").lower()
+    print("\n" + show_inventory(list_inventory()))
+    answer = input("\nWhat item are you " + str(user_words) + "? Please type the exact name. ('q' to quit)\n").lower()
     if answer == "q":
         sys.exit()
     return [answer, user_words]
@@ -140,6 +141,8 @@ def editfor_renting(item_name):
         if line[0].lower() == item_name:
             if line[1] > 0:
                 line[1] = line[1] - 1
+                price = (line[3] * .07) + line[3]
+                deposit = line[-1] / 10
             else:
                 print("\nSorry, that item is out of stock!")
                 return "Sorry, that item is out of stock!"
@@ -150,7 +153,9 @@ def editfor_renting(item_name):
         # write to file
         with open("stock_inventory.csv", "w") as file:
             file.write(text_inv)
-        print("\nWe'll be taking a 10% deposit.")
+        print("\nThat will cost $" + str(price) + ".")
+        print("We'll also be taking a small deposit of $" + str(deposit) + ".")
+        print("The deposit will be returned once the item has been returned.")
         return "Grabbing item..."
     else:
         print("\nSorry, we don't have that item!")
