@@ -218,7 +218,7 @@ def create_transaction(info_and_status):
     """
     list_list = list_inventory()
     for item in list_list:
-        if item[0] == info_and_status[0]:
+        if item[0].lower() == info_and_status[0]:
             item_list = item
     paid = (int(item_list[3]) * .07) + int(item_list[3])
     deposit = (int(item_list[-1]) / 10)
