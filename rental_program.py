@@ -271,7 +271,7 @@ def create_transaction(info_and_status):
 
     # write revenue to file
     with open("current_revenue.txt", "w") as file:
-        file.write(revenue)
+        file.write(str(revenue))
 
     return trans_string
 
