@@ -34,6 +34,7 @@ def list_to_text(list_of_list):
         if line != list_of_list[-1]:
             final_string += "\n"
     return final_string
+
 def show_inventory(list_of_lists):
     """
     Shows the inventory to the user.
@@ -45,8 +46,6 @@ def show_inventory(list_of_lists):
         else:
             final_string += si_list[0] + ": Out of Stock\n"
     return final_string
-
-
 
 def th_question():
     """
@@ -82,7 +81,6 @@ def th_question():
         print("\nPlease enter one of the 4 letters.\n")
         th_question()
 
-
 def r_question():
     """
     Asks the user whether they’re renting, returning, or replacing an item.
@@ -104,7 +102,6 @@ def item_question(user_words):
     if answer == "q":
         sys.exit()
     return [answer, user_words]
-
 
 def edit_inventory(name_and_status):
     """
@@ -253,4 +250,3 @@ def edit_transaction_history(created_transaction):
     return "Transaction recorded."
 
 th_question()
-# make sure to keep track of revenue
