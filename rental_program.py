@@ -220,10 +220,11 @@ def create_transaction(info_and_status):
     for item in list_list:
         if item[0].lower() == info_and_status[0]:
             item_list = item
-    paid = (int(item_list[3]) * .07) + int(item_list[3])
-    deposit = (int(item_list[-1]) / 10)
+    name = info_and_status[0]
+    paid = str((int(item_list[3]) * .07) + int(item_list[3]))
+    deposit = str((int(item_list[-1]) / 10))
     if info_and_status[1] == "renting":
-        trans_string = "Rented: " + info_and_status[0] + " Paid: " + str(paid) + " Deposit: " + str(deposit)
+        trans_string = "Rented: " + name + "; Paid: " + paid + "; Deposit: " + deposit
     elif info_and_status[1] == "returning":
         trans_string = "placeholder"
     elif info_and_status[1] == "replacing":
@@ -233,7 +234,6 @@ def create_transaction(info_and_status):
     # ['Replaced: Call of Duty Baseball Bat; Paid: 3\n',
     #  'Rented: Replica Kingdom Key; Paid: 246.1; Deposit: 50\n',
     #  'Returned: Replica Portal Gun']
-    trans_string = info_and_status
     return trans_string
 
 def edit_transaction_history(created_transaction):
