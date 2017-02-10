@@ -216,19 +216,26 @@ def create_transaction(info_and_status):
     """
     Takes in item info and status [name, r] and converts it into a transaction string.
     """
+    # get info from the inventory
     list_list = list_inventory()
     for item in list_list:
         if item[0].lower() == info_and_status[0]:
             item_list = item
+    # set info for use
     name = info_and_status[0]
     paid = str((int(item_list[3]) * .07) + int(item_list[3]))
     deposit = str((int(item_list[-1]) / 10))
+
+    # create string
     if info_and_status[1] == "renting":
         trans_string = "Rented: " + name + "; Paid: " + paid + "; Deposit: " + deposit
+        trans_string += "........Total Revenue: " + str(revenue)
     elif info_and_status[1] == "returning":
         trans_string = "Returned: " + name
+        trans_string += "........Total Revenue: " + str(revenue)
     elif info_and_status[1] == "replacing":
         trans_string = "Replaced: " + name + "; Paid: " + deposit
+        trans_string += "........Total Revenue: " + str(revenue)
     else:
         return "Error!"
     return trans_string
