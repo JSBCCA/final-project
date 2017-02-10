@@ -23,3 +23,4 @@ Returned: replica portal gun........Total Revenue: 2201.74
 Returned: replica portal gun........Total Revenue: 2201.74
 Replaced: replica portal gun; Paid: 36.0........Total Revenue: 2237.74
 Returned: replica portal gun........Total Revenue: 2237.74
+Rented: replica kingdom key; Paid: 310.3; Deposit: 50.0........Total Revenue: 2548.04

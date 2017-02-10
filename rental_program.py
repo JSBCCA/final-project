@@ -110,9 +110,19 @@ def item_question(user_words):
     """
     print("\n" + show_inventory(list_inventory()))
     answer = input("\nWhat item are you " + str(user_words) + "? Please type the exact name. ('q' to quit)\n").lower()
+    # make list to check if item is real
+    list_of_inv = list_inventory()
+    namelist = []
+    for line in list_of_inv:
+        namelist.append(line[0].lower())
+    # do something based on item
     if answer == "q":
         sys.exit()
-    return [answer, user_words]
+    elif answer in namelist:
+        return [answer, user_words]
+    else:
+        print("\nSorry, we don't have that item!")
+        return item_question(user_words)
 
 def edit_inventory(name_and_status):
     """
