@@ -228,12 +228,9 @@ def create_transaction(info_and_status):
     elif info_and_status[1] == "returning":
         trans_string = "Returned: " + name
     elif info_and_status[1] == "replacing":
-        trans_string = "placeholder"
+        trans_string = "Replaced: " + name + "; Paid: " + deposit
     else:
         return "Error!"
-    # ['Replaced: Call of Duty Baseball Bat; Paid: 3\n',
-    #  'Rented: Replica Kingdom Key; Paid: 246.1; Deposit: 50\n',
-    #  'Returned: Replica Portal Gun']
     return trans_string
 
 def edit_transaction_history(created_transaction):
@@ -253,3 +250,4 @@ def edit_transaction_history(created_transaction):
     return "Transaction recorded."
 
 th_question()
+# make sure to keep track of revenue
