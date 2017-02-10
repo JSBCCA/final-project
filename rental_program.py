@@ -1,6 +1,16 @@
 """ Module Docstring """
 import sys
 
+def isfloat(value):
+    """
+    If value is a float, return True.
+    """
+    try:
+        float(value)
+        return True
+    except:
+        return False
+
 def list_inventory():
     """
     Returns inventory as a list of lists.
@@ -228,22 +238,36 @@ def create_transaction(info_and_status):
     # get revenue
     with open("current_revenue.txt", "r") as file:
         revenue = file.read()
+    # convert revenue from string
+    if isfloat(revenue):
+        revenue = float(revenue)
+    else:
+        revenue = int(revenue)
 
     # create string
     if info_and_status[1] == "renting":
-        # change revenue here
+        if isfloat(paid):
+            revenue += float(paid)
+        else:
+            revenue += int(paid)
         trans_string = "Rented: " + name + "; Paid: " + paid + "; Deposit: " + deposit
         trans_string += "........Total Revenue: " + str(revenue)
+
     elif info_and_status[1] == "returning":
-        # change revenue here
         trans_string = "Returned: " + name
         trans_string += "........Total Revenue: " + str(revenue)
+
     elif info_and_status[1] == "replacing":
-        # change revenue here
+        if isfloat(deposit):
+            revenue += float(deposit)
+        else:
+            revenue += int(deposit)
         trans_string = "Replaced: " + name + "; Paid: " + deposit
         trans_string += "........Total Revenue: " + str(revenue)
+
     else:
         return "Error!"
+
     return trans_string
 
 def edit_transaction_history(created_transaction):
