@@ -253,6 +253,7 @@ def create_transaction(info_and_status):
         trans_string = "Rented: " + name + "; Paid: " + paid + "; Deposit: " + deposit
         trans_string += "........Total Revenue: " + str(revenue)
 
+
     elif info_and_status[1] == "returning":
         trans_string = "Returned: " + name
         trans_string += "........Total Revenue: " + str(revenue)
@@ -267,6 +268,10 @@ def create_transaction(info_and_status):
 
     else:
         return "Error!"
+
+    # write revenue to file
+    with open("current_revenue.txt", "w") as file:
+        file.write(revenue)
 
     return trans_string
 
