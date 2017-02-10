@@ -73,7 +73,7 @@ def th_question():
         # make transaction
         item_info = item_question(r_question())
         edit_inventory(item_info)
-        edit_transaction_history(create_transaction())
+        edit_transaction_history(create_transaction(item_info))
         print("Thank you for your business!")
     else:
         print("\nPlease enter one of the 4 letters.\n")
@@ -216,8 +216,14 @@ def create_transaction(info_and_status):
     """
     Takes in item info and status [name, r] and converts it into a transaction string.
     """
+    list_list = list_inventory()
+    for item in list_list:
+        if item[0] == info_and_status[0]:
+            item_list = item
+    paid = (int(item_list[3]) * .07) + int(item_list[3])
+    deposit = (int(item_list[-1]) / 10)
     if info_and_status[1] == "renting":
-        trans_string = "placeholder"
+        trans_string = "Rented: " + info_and_status[0] + " Paid: " + str(paid) + " Deposit: " + str(deposit)
     elif info_and_status[1] == "returning":
         trans_string = "placeholder"
     elif info_and_status[1] == "replacing":
