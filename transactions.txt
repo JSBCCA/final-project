@@ -2,12 +2,12 @@ Rented: rare zelda nes; Paid: 224.7; Deposit: 45........Total Revenue: 224.7
 Rented: replica portal gun; Paid: 214; Deposit: 20........Total Revenue: 438.7
 Rented: call of duty baseball bat; Paid: 23.54; Deposit: 3........Total Revenue: 462.24
 Replaced: call of duty baseball bat; Paid: 3........Total Revenue: 435.24
-Rented: 1995 mario figure defect (2 noses); Paid: 160.5; Deposit: 40........Total Revenue: 595.74
+Rented: mario figure defect (2 noses); Paid: 160.5; Deposit: 40........Total Revenue: 595.74
 Rented: replica kingdom key; Paid: 310.3; Deposit: 50........Total Revenue: 906.04
 Returned: replica portal gun........Total Revenue: 906.04
 Rented: rare zelda nes; Paid: 224.7; Deposit: 45.0........Total Revenue: 1130.74
 Returned: rare zelda nes........Total Revenue: 1130.74
 Replaced: replica kingdom key; Paid: 50.0........Total Revenue: 680.74
-Returned: 1995 mario figure defect (2 noses)........Total Revenue: 680.74
+Returned: mario figure defect (2 noses)........Total Revenue: 680.74
 Replaced: rare zelda nes; Paid: 45.0........Total Revenue: 275.74
-Rented: limited edition punch out! boxing gloves; Paid: 321.0; Deposit: 100.0........Total Revenue: 596.74
+Rented: punch out! boxing gloves; Paid: 321.0; Deposit: 100.0........Total Revenue: 596.74
