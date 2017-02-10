@@ -172,7 +172,7 @@ def editfor_returning(item_name):
         # write to file
         with open("stock_inventory.csv", "w") as file:
             file.write(text_inv)
-        print("Your deposit has been returned to you.")
+        print("\nYour deposit has been returned to you.")
         return "Restocking item..."
     else:
         print("\nSorry, we don't have that item!")
@@ -201,7 +201,7 @@ def editfor_replacing(item_name):
         # write to file
         with open("stock_inventory.csv", "w") as file:
             file.write(text_inv)
-        print("We will keep your earlier deposit as compensation.")
+        print("\nWe will keep your earlier deposit as compensation.")
         return "Replacing item..."
     else:
         print("\nSorry, we don't have that kind of item!")
