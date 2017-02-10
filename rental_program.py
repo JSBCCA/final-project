@@ -1,4 +1,4 @@
-""" Module Docstring """
+""" Program that allows the user to rent and return items. """
 import sys
 
 def isfloat(value):
