@@ -226,7 +226,7 @@ def create_transaction(info_and_status):
     if info_and_status[1] == "renting":
         trans_string = "Rented: " + name + "; Paid: " + paid + "; Deposit: " + deposit
     elif info_and_status[1] == "returning":
-        trans_string = "placeholder"
+        trans_string = "Returned: " + name
     elif info_and_status[1] == "replacing":
         trans_string = "placeholder"
     else:
