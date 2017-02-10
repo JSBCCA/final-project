@@ -72,8 +72,11 @@ def th_question():
     elif answer == "t":
         # make transaction
         item_info = item_question(r_question())
-        edit_inventory(item_info)
-        edit_transaction_history(create_transaction(item_info))
+        transaction_lock = edit_inventory(item_info)
+        if (transaction_lock == "Grabbing item..."
+           ) or (transaction_lock == "Restocking item...") or (
+               transaction_lock == "Replacing item..."):
+            edit_transaction_history(create_transaction(item_info))
         print("Thank you for your business!")
     else:
         print("\nPlease enter one of the 4 letters.\n")
