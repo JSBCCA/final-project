@@ -14,3 +14,12 @@ Rented: punch out! boxing gloves; Paid: 321.0; Deposit: 100.0........Total Reven
 Returned: punch out! boxing gloves........Total Revenue: 596.74
 Rented: rare zelda nes; Paid: 224.7; Deposit: 45.0........Total Revenue: 821.44
 Rented: replica kingdom key; Paid: 310.3; Deposit: 50.0........Total Revenue: 1131.74
+Rented: replica portal gun; Paid: 214.0; Deposit: 36.0........Total Revenue: 1345.74
+Rented: replica portal gun; Paid: 214.0; Deposit: 36.0........Total Revenue: 1559.74
+Rented: replica portal gun; Paid: 214.0; Deposit: 36.0........Total Revenue: 1773.74
+Rented: replica portal gun; Paid: 214.0; Deposit: 36.0........Total Revenue: 1987.74
+Rented: replica portal gun; Paid: 214.0; Deposit: 36.0........Total Revenue: 2201.74
+Returned: replica portal gun........Total Revenue: 2201.74
+Returned: replica portal gun........Total Revenue: 2201.74
+Replaced: replica portal gun; Paid: 36.0........Total Revenue: 2237.74
+Returned: replica portal gun........Total Revenue: 2237.74
