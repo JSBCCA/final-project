@@ -110,7 +110,7 @@ def item_question(user_words):
     """
     print("\n" + show_inventory(list_inventory()))
     print("What item are you " + str(user_words
-                                      ) + "? Please type name as it is spelled. ('q' to quit)")
+                                    ) + "? Please type name as it is spelled. ('q' to quit)")
     answer = input().strip().lower()
     # make list to check if item is real
     list_of_inv = list_inventory()
