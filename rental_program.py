@@ -225,15 +225,21 @@ def create_transaction(info_and_status):
     name = info_and_status[0]
     paid = str((int(item_list[3]) * .07) + int(item_list[3]))
     deposit = str((int(item_list[-1]) / 10))
+    # get revenue
+    with open("current_revenue.txt", "r") as file:
+        revenue = file.read()
 
     # create string
     if info_and_status[1] == "renting":
+        # change revenue here
         trans_string = "Rented: " + name + "; Paid: " + paid + "; Deposit: " + deposit
         trans_string += "........Total Revenue: " + str(revenue)
     elif info_and_status[1] == "returning":
+        # change revenue here
         trans_string = "Returned: " + name
         trans_string += "........Total Revenue: " + str(revenue)
     elif info_and_status[1] == "replacing":
+        # change revenue here
         trans_string = "Replaced: " + name + "; Paid: " + deposit
         trans_string += "........Total Revenue: " + str(revenue)
     else:
