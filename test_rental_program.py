@@ -1,11 +1,6 @@
 """ Testing rental_program """
 import rental_program
 
-def test_isfloat():
-    """ Checks if value is a float. """
-    assert rental_program.isfloat(5) is False
-    assert rental_program.isfloat(5.1) is True
-
 def test_edit_inventory():
     """ Takes the user’s input and tells the inventory what items to take out/put in. """
     assert rental_program.edit_inventory(["sdsaj", "dkj"]) == "Error!"
