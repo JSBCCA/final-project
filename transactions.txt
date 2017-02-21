@@ -29,3 +29,7 @@ Rented: punch out! boxing gloves; Paid: 321.0; Deposit: 100.0........Total Reven
 Rented: call of duty baseball bat; Paid: 23.54; Deposit: 3.0........Total Revenue: 3053.08
 Rented: call of duty baseball bat; Paid: 23.54; Deposit: 3.0........Total Revenue: 3076.62
 Rented: call of duty baseball bat; Paid: 23.54; Deposit: 3.0........Total Revenue: 3100.16
+Rented: replica portal gun; Paid: 214.0; Deposit: 36.0........Total Revenue: 3314.16
+Rented: replica portal gun; Paid: 214.0; Deposit: 36.0........Total Revenue: 3528.16
+Rented: replica portal gun; Paid: 214.0; Deposit: 36.0........Total Revenue: 3742.16
+Rented: replica portal gun; Paid: 214.0; Deposit: 36.0........Total Revenue: 3956.16
