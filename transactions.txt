@@ -34,3 +34,4 @@ Rented: replica portal gun; Paid: 214.0; Deposit: 36.0........Total Revenue: 352
 Rented: replica portal gun; Paid: 214.0; Deposit: 36.0........Total Revenue: 3742.16
 Rented: replica portal gun; Paid: 214.0; Deposit: 36.0........Total Revenue: 3956.16
 Returned: replica portal gun........Total Revenue: 3956.16
+Rented: call of duty baseball bat; Paid: 23.54; Deposit: 3.0........Total Revenue: 3979.7
