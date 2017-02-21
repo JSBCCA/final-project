@@ -33,3 +33,4 @@ Rented: replica portal gun; Paid: 214.0; Deposit: 36.0........Total Revenue: 331
 Rented: replica portal gun; Paid: 214.0; Deposit: 36.0........Total Revenue: 3528.16
 Rented: replica portal gun; Paid: 214.0; Deposit: 36.0........Total Revenue: 3742.16
 Rented: replica portal gun; Paid: 214.0; Deposit: 36.0........Total Revenue: 3956.16
+Returned: replica portal gun........Total Revenue: 3956.16
