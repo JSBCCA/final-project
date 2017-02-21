@@ -1,16 +1,6 @@
 """ Program that allows the user to rent and return items. """
 import sys
 
-def isfloat(value):
-    """
-    If value is a float, return True.
-    """
-    try:
-        float(value)
-        return True
-    except:
-        return False
-
 def list_inventory():
     """
     Returns inventory as a list of lists.
@@ -256,17 +246,17 @@ def create_transaction(info_and_status):
     with open("current_revenue.txt", "r") as file:
         revenue = file.read()
     # convert revenue from string
-    if isfloat(revenue):
-        revenue = float(revenue)
-    else:
+    if float(revenue).is_integer():
         revenue = int(revenue)
+    else:
+        revenue = float(revenue)
 
     # create string
     if info_and_status[1] == "renting":
-        if isfloat(paid):
-            revenue += float(paid)
-        else:
+        if float(paid).is_integer():
             revenue += int(paid)
+        else:
+            revenue += float(paid)
         trans_string = "Rented: " + name + "; Paid: " + paid + "; Deposit: " + deposit
         trans_string += "........Total Revenue: " + str(revenue)
 
@@ -276,10 +266,10 @@ def create_transaction(info_and_status):
         trans_string += "........Total Revenue: " + str(revenue)
 
     elif info_and_status[1] == "replacing":
-        if isfloat(deposit):
-            revenue += float(deposit)
-        else:
+        if float(deposit).is_integer():
             revenue += int(deposit)
+        else:
+            revenue += float(deposit)
         trans_string = "Replaced: " + name + "; Paid: " + deposit
         trans_string += "........Total Revenue: " + str(revenue)
 
