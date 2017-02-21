@@ -308,4 +308,5 @@ def edit_transaction_history(created_transaction):
 
     return "Transaction recorded."
 
-main_menu()
+if __name__ == "__main__":
+    main_menu()

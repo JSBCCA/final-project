@@ -34,12 +34,3 @@ def test_editfor_replacing():
     """ If the user is replacing, this should edit the inventory to account for that. """
     assert rental_program.editfor_replacing("replica portal gun") == "Replacing item..."
     assert rental_program.editfor_replacing('elder scroll signed by bill nye') == "Sorry, our stock of that item is full!"
-
-def test_edit_transaction_history():
-    """ Takes the user’s input and adds new info to the transaction history. """
-    assert rental_program.edit_transaction_history(["replica portal gun",
-                                                    "renting"]) == "Transaction recorded."
-    assert rental_program.edit_transaction_history(["replica portal gun",
-                                                    "returning"]) == "Transaction recorded."
-    assert rental_program.edit_transaction_history(["elder scroll signed by bill nye",
-                                                    "replacing"]) == "Transaction recorded."
