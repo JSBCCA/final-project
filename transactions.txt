@@ -25,3 +25,7 @@ Replaced: replica portal gun; Paid: 36.0........Total Revenue: 2237.74
 Returned: replica portal gun........Total Revenue: 2237.74
 Rented: replica kingdom key; Paid: 310.3; Deposit: 50.0........Total Revenue: 2548.04
 Rented: mario figure defect; Paid: 160.5; Deposit: 40.0........Total Revenue: 2708.54
+Rented: punch out! boxing gloves; Paid: 321.0; Deposit: 100.0........Total Revenue: 3029.54
+Rented: call of duty baseball bat; Paid: 23.54; Deposit: 3.0........Total Revenue: 3053.08
+Rented: call of duty baseball bat; Paid: 23.54; Deposit: 3.0........Total Revenue: 3076.62
+Rented: call of duty baseball bat; Paid: 23.54; Deposit: 3.0........Total Revenue: 3100.16
