@@ -57,7 +57,7 @@ def show_inventory(list_of_lists):
             final_string += si_list[0] + ": Out of Stock\n"
     return final_string
 
-def th_question():
+def main_menu():
     """
     If t: make transaction
     If h: show transaction history
@@ -80,7 +80,7 @@ def th_question():
         print("\n" + show_inventory(list_inventory()))
     elif answer == "t":
         # make transaction
-        item_info = item_question(r_question())
+        item_info = item_question(rent_return_replace())
         transaction_lock = edit_inventory(item_info)
         if (transaction_lock == "Grabbing item..."
            ) or (transaction_lock == "Restocking item...") or (
@@ -89,9 +89,9 @@ def th_question():
         print("Thank you for your business!")
     else:
         print("\nPlease enter one of the 4 letters.\n")
-        th_question()
+        main_menu()
 
-def r_question():
+def rent_return_replace():
     """
     Asks the user whether they’re renting, returning, or replacing an item.
     """
@@ -100,7 +100,7 @@ def r_question():
     if answer == "q":
         sys.exit()
     elif (answer != "renting") and (answer != "returning") and (answer != "replacing"):
-        return r_question()
+        return rent_return_replace()
     else:
         return answer
 
@@ -308,4 +308,4 @@ def edit_transaction_history(created_transaction):
 
     return "Transaction recorded."
 
-th_question()
+main_menu()

@@ -1,7 +1,11 @@
-""" Module Docstring """
+""" Testing rental_program """
 import rental_program
 
-# can't test input
+def test_isfloat():
+    """ Checks if value is a float. """
+    assert rental_program.isfloat(5) is False
+    assert rental_program.isfloat(5.1) is True
+
 def test_edit_inventory():
     """ Takes the user’s input and tells the inventory what items to take out/put in. """
     assert rental_program.edit_inventory(["sdsaj", "dkj"]) == "Error!"
@@ -11,14 +15,31 @@ def test_edit_inventory():
                                           "returning"]) == "Restocking item..."
     assert rental_program.edit_inventory(["replica portal gun",
                                           "replacing"]) == "Replacing item..."
-    assert rental_program.edit_inventory(['elder scroll signed by bill nye',
+    assert rental_program.edit_inventory(['mario figure defect',
                                           "renting"]) == "Sorry, that item is out of stock!"
+    assert rental_program.edit_inventory(['elder scroll signed by bill nye',
+                                          "returning"]) == "Sorry, our stock of that item is full!"
 
+def test_editfor_renting():
+    """ If the user is renting, this should edit the inventory to account for that. """
+    assert rental_program.editfor_renting("replica portal gun") == "Grabbing item..."
+    assert rental_program.editfor_renting('mario figure defect') == "Sorry, that item is out of stock!"
+
+def test_editfor_returning():
+    """ If the user is returning, this should edit the inventory to account for that. """
+    assert rental_program.editfor_returning("replica portal gun") == "Restocking item..."
+    assert rental_program.editfor_returning('elder scroll signed by bill nye') == "Sorry, our stock of that item is full!"
+
+def test_editfor_replacing():
+    """ If the user is replacing, this should edit the inventory to account for that. """
+    assert rental_program.editfor_replacing("replica portal gun") == "Replacing item..."
+    assert rental_program.editfor_replacing('elder scroll signed by bill nye') == "Sorry, our stock of that item is full!"
 
 def test_edit_transaction_history():
     """ Takes the user’s input and adds new info to the transaction history. """
-    assert rental_program.edit_transaction_history(["replica portal gun", "renting"]) == "Added."
-    assert rental_program.edit_transaction_history(["replica portal gun", "returning"]) == "Added."
+    assert rental_program.edit_transaction_history(["replica portal gun",
+                                                    "renting"]) == "Transaction recorded."
+    assert rental_program.edit_transaction_history(["replica portal gun",
+                                                    "returning"]) == "Transaction recorded."
     assert rental_program.edit_transaction_history(["elder scroll signed by bill nye",
-                                                    "replacing"]) == "Added."
-    assert rental_program.edit_transaction_history(["jdanj", "klasfj"]) == "Error!"
+                                                    "replacing"]) == "Transaction recorded."
