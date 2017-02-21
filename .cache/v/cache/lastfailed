@@ -1,3 +1,4 @@
 {
-  "test_rental_program.py": true
+  "test_rental_program.py::test_edit_transaction_history": true,
+  "test_rental_program.py::test_isfloat": true
 }
