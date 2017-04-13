@@ -267,7 +267,7 @@ def create_transaction(info_and_status):
 
     elif info_and_status[1] == "replacing":
         if float(deposit).is_integer():
-            revenue += int(deposit)
+            revenue += int(float(deposit))
         else:
             revenue += float(deposit)
         trans_string = "Replaced: " + name + "; Paid: " + deposit

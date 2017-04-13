@@ -35,3 +35,6 @@ Rented: replica portal gun; Paid: 214.0; Deposit: 36.0........Total Revenue: 374
 Rented: replica portal gun; Paid: 214.0; Deposit: 36.0........Total Revenue: 3956.16
 Returned: replica portal gun........Total Revenue: 3956.16
 Rented: call of duty baseball bat; Paid: 23.54; Deposit: 3.0........Total Revenue: 3979.7
+Rented: rare zelda nes; Paid: 224.7; Deposit: 45.0........Total Revenue: 4204.4
+Returned: mario figure defect........Total Revenue: 4204.4
+Replaced: replica kingdom key; Paid: 50.0........Total Revenue: 4254.4
